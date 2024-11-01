@@ -1,0 +1,101 @@
+body {
+    background-color: bisque;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: rgb(59, 37, 12);
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(59, 37, 12);
+}
+
+p, a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: rgb(59, 37, 12);
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+ol, ul {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: rgb(59, 37, 12);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    height: 30px;
+    margin-right: 5%;
+}
+
+.header-link {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(59, 37, 12);
+    margin-right: 5px;
+    width: auto;
+    margin: 5px;
+    height: 110%;
+    border-radius: 3px;
+}
+
+.header-link:hover {
+    background-color: rgb(224, 171, 101);
+}
+
+table {
+    width: 98%;
+    margin: 15px;
+}
+
+td, th {
+    padding: 7px;
+}
+
+th:hover {
+    background-color: rgb(61, 60, 60);
+    color: aliceblue;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(191, 235, 236);
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(242, 247, 221);
+}
+
+tr:hover {
+    background-color: rgb(243, 202, 245);
+}
+
+table .id {
+    width: 5%;
+}
+
+table th {
+    background-color: rgb(212, 208, 205);
+    color: black;
+    text-align: left;
+}
+
+table, th, td {
+    border: 1px solid rgb(95, 94, 94);
+    border-collapse: collapse;
+}
+
+caption {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    padding: 10px;
+}
+
