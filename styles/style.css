@@ -20,6 +20,7 @@ p, a {
     font-size: 15px;
     color: rgb(59, 37, 12);
     margin-right: 5px;
+    text-decoration: none;
 }
 
 ol, ul {
@@ -61,14 +62,22 @@ img {
     flex-direction: row;
     justify-content: right;
     height: 30px;
+    margin-right: 5%;
 }
 
 .header-link {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     color: rgb(59, 37, 12);
     margin-right: 5px;
     width: auto;
+    margin: 5px;
+    height: 110%;
+    border-radius: 3px;
+}
+
+.header-link:hover {
+    background-color: rgb(224, 171, 101);
 }
 
 .container {
