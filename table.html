@@ -20,6 +20,7 @@
             <th>Фамилия</th>
             <th>Имя</th>
             <th>Возраст</th>
+            <th>Пол</th>
             <th>Телефон</th>
             <th>email</th>
         </tr>
@@ -28,6 +29,7 @@
             <td>Голубев</td>
             <td>Иван</td>
             <td>20</td>
+            <td>М</td>
             <td>+7 966 887 44 56</td>
             <td>golub@mail.ru</td>
         </tr>
@@ -36,6 +38,7 @@
             <td>Синицина</td>
             <td>Анастасия</td>
             <td>23</td>
+            <td>Ж</td>
             <td>+7 966 887 44 57</td>
             <td>bluebird@ya.ru</td>
         </tr>
@@ -44,6 +47,7 @@
             <td>Дроздов</td>
             <td>Пётр</td>
             <td>25</td>
+            <td>М</td>
             <td>+7 966 780 44 56</td>
             <td>dro@bk.ru</td>
         </tr>
@@ -52,6 +56,7 @@
             <td>Галкин</td>
             <td>Максим</td>
             <td>48</td>
+            <td>М</td>
             <td>+7 495 142 60 10</td>
             <td>tours@maxgalkin.ru</td>
         </tr>
@@ -60,10 +65,66 @@
             <td>Хуцишвили</td>
             <td>Гонгаури</td>
             <td>19</td>
+            <td>М</td>
             <td>8 800 555 35 35</td>
             <td>ivc@gmail.com</td>
         </tr>
     </table>
+
+    <script>
+        $(function () {
+            $("#form").submit(function (event) {
+                var form = event.target;
+                var formData = new FormData(form);
+                for (var pair of formData.entries()) {
+                    console.log(pair[0] + ": " + pair[1]);
+                }
+                console.log(Object.fromEntries(formData));
+                return false;
+            })
+        });
+    </script>
+
+    <form id="form">
+        <fieldset>
+            <legend>Добавление студента:</legend>
+            <fieldset>
+                <legend>Введите данные о себе:</legend><br>
+                <label for="id">Введите id:</label>
+                <input type="number" id="id" name="id" value="6">
+                <label for="lname">Фамилия:</label>
+                <input type="text" name="lname" id="lname" placeholder="Введите фамилию">
+                <label for="fname">Имя:</label>
+                <input type="text" name="fname" id="fname" placeholder="Введите имя">
+                <label for="age">Ваш возраст:</label>
+                <input type="number" id="age" name="age" value="18">
+                <br>
+                <br>
+                <label for="gender">Ваш пол:</label>
+                <br>
+                <input type="radio" id="male" name="gender" value="Мужской">
+                <label for="male">Мужской</label>
+                <br>
+                <input type="radio" id="female" name="gender" value="Женский">
+                <label for="female">Женский</label>
+                <br>
+                <input type="radio" id="helicopter" name="gender" value="Боевой вертолёт">
+                <label for="helicopter">Боевой вертолёт Ка-52</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Введите контактные данные:</legend><br>
+                <label for="number_phone">Номер телефона:</label>
+                <input type="text" id="number_phone" name="number_phone" placeholder="Введите номер">
+                <label for="email">email:</label>
+                <input type="text" id="email" name="email" placeholder="Введите email">
+            </fieldset>
+            <br>
+            <input type="submit" value="Отправить свои персональные данные">
+        </fieldset>
+        
+    </form>
+    
 </body>
 
 </html>
